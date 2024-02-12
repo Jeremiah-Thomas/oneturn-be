@@ -20,8 +20,8 @@ database.once("connected", () => {
 
 const app = express();
 
+app.use(cors({ origin: true }));
 app.use(express.json());
-app.use(cors());
 app.use("/api", routes);
 
 app.listen(8000, () => {
