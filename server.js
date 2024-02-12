@@ -20,7 +20,7 @@ database.once("connected", () => {
 
 const app = express();
 
-app.use(cors({ origin: true }));
+app.use(cors({ origin: "*" }));
 app.use(express.json());
 app.use("/api", routes);
 
