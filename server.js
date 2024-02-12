@@ -20,9 +20,8 @@ database.once("connected", () => {
 
 const app = express();
 
-app.use(cors({ origin: "https://oneturn.netlify.app", credentials: true }));
-
 app.use(express.json());
+app.use(cors());
 app.use("/api", routes);
 
 app.listen(8000, () => {
